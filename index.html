@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Für Basma 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 20px;
+      margin-top: 15px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background: white;
+      color: #ee9ca7;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ffe6ea;
+    }
+
+    textarea {
+      width: 90%;
+      height: 80px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .wishBox {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>Hey Basma 💖</h1>
+
+    <p>
+      Ich weiß, es ist gerade nicht alles leicht zwischen uns.<br><br>
+
+      Aber ich glaube an uns.<br>
+      Nicht, weil alles perfekt ist – sondern weil ich dich nicht einfach aufgeben will 🌿<br><br>
+
+      Lass uns einfach mal rausgehen, spazieren und reden… ohne Druck, nur wir zwei.
+    </p>
+
+    <!-- FOTO -->
+    <img src="dein-foto.jpg" alt="Unser Foto">
+
+    <!-- MUSIK -->
+    <p>🎵 Unser Lied: I’m Yours – Isabel LaRosa</p>
+
+    <audio controls>
+      <source src="im_yours.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
+
+    <button onclick="alert('Ich freue mich auf dich, Basma 💖')">
+      Ja, ich komme mit dir spazieren 💖
+    </button>
+
+    <!-- WUNSCH BOX -->
+    <div class="wishBox">
+
+      <p>✨ Wenn du etwas sagen oder dir etwas wünschen willst:</p>
+
+      <textarea id="wish" placeholder="Schreib hier deinen Gedanken..."></textarea>
+
+      <br>
+
+      <button onclick="sendWish()">
+        Abschicken 💌
+      </button>
+
+      <p id="response"></p>
+
+    </div>
+
+  </div>
+
+  <script>
+    function sendWish() {
+      const text = document.getElementById("wish").value;
+
+      if (text.trim() === "") {
+        document.getElementById("response").innerHTML = "Schreib mir einfach etwas ❤️";
+      } else {
+        document.getElementById("response").innerHTML =
+          "Danke Basma ❤️ Ich habe es gelesen.";
+      }
+    }
+  </script>
+
+</body>
+</html>
